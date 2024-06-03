@@ -22,9 +22,6 @@ class AlienInvaion:
 
         self.ship = Ship(self)
 
-        # Set the background color
-        self.bg_color = (230, 230, 230)
-    
 
     def run_game(self):
         """
@@ -32,6 +29,7 @@ class AlienInvaion:
         """
         while True:
             self._check_events()
+            self.ship.update()
             self._update_screen()
             
 
@@ -44,8 +42,11 @@ class AlienInvaion:
                 sys.exit()
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RIGHT:
-                    # Move the ship to the right
-                    self.ship.rect.x += 1
+                    self.ship.moving_right = True
+            elif event.type == pygame.KEYUP:
+                if event.key == pygame.K_RIGHT:
+                    self.ship.moving_right = False
+                
 
 
     def _update_screen(self):
