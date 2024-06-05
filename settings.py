@@ -22,14 +22,14 @@ class Settings:
 
         # Bullet settings
         self.bullet_speed = 1.0
-        self.bullet_width = 300
+        self.bullet_width = 3
         self.bullet_height = 15
         self.bullet_color = (60, 60, 60)
         self.bullets_allowed = 3
 
         # Alien settings
         self.alien_speed = 1
-        self.fleet_drop_speed = 15
+        self.fleet_drop_speed = 5
         # Fleet direction of 1 represents right; -1 represents left.
         self.fleet_direction = 1
 
@@ -46,7 +46,7 @@ class Settings:
         Initialize settings that change throughout the game
         """
         self.ship_speed = 1.5
-        self.bullet_speed = 3.0
+        self.bullet_speed = 1.1
         self.alien_speed = 1.0
 
         # fleet_direction of 1 represents right; -1 represents left
